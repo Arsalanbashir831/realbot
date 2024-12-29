@@ -18,7 +18,7 @@ export function Nav() {
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-8">
           <Link href="/" className="text-white text-2xl font-bold">
-            REALBOT
+            <img height={200} width={200} src='/image.png'/>
           </Link>
           <div className="hidden md:flex space-x-2">
             {links.map((link) => (
