@@ -1,6 +1,9 @@
+'use client'
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const AboutUsPage = () => {
+  const router = useRouter()
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white mt-10">
       {/* Header Section */}
@@ -81,7 +84,7 @@ const AboutUsPage = () => {
           <p className="text-lg text-gray-400 mt-4 max-w-xl mx-auto">
             Ready to experience unfiltered, authentic AI conversations? Dive in and discover the truth, one question at a time.
           </p>
-          <button className="mt-6 px-8 py-3 bg-blue-500 text-white font-bold rounded-full shadow-md hover:bg-blue-600 transition-colors duration-300">
+          <button onClick={()=>router.push('/chat')} className="mt-6 px-8 py-3 bg-blue-500 text-white font-bold rounded-full shadow-md hover:bg-blue-600 transition-colors duration-300">
             Start Chatting Now
           </button>
         </section>
