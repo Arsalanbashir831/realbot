@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Bot, ArrowLeft } from 'lucide-react'; // Added ArrowLeft for the Back button
+import { Send, Bot } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -12,12 +12,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export const Chatbot = () => {
   const [messages, setMessages] = useState([
-    { content: 'Heya wassup!?', sender: 'bot' },
+    { content: "yo! what's up?", sender: 'bot' },
   ]);
+  const [tempContext, setTempContext] = useState([]); // Temporary context
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef(null);
-  const router = useRouter(); // Hook to navigate to other routes
 
   // Function to scroll to the bottom of the messages
   const scrollToBottom = () => {
@@ -35,6 +35,7 @@ export const Chatbot = () => {
 
     const userMessage = input.trim();
     setMessages([...messages, { content: userMessage, sender: 'user' }]);
+    setTempContext((prev) => [...prev, { content: userMessage, sender: 'user' }].slice(-5)); // Keep only the last 5 messages
     setInput('');
     setLoading(true);
 
@@ -42,7 +43,7 @@ export const Chatbot = () => {
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userMessage }),
+        body: JSON.stringify({ userMessage, context: tempContext }), // Pass tempContext
       });
 
       if (!response.ok) {
@@ -59,6 +60,7 @@ export const Chatbot = () => {
       const botResponse =
         data?.choices[0]?.message?.content || 'Oops! Something went wrong.';
       setMessages((prev) => [...prev, { content: botResponse, sender: 'bot' }]);
+      setTempContext((prev) => [...prev, { content: botResponse, sender: 'bot' }].slice(-5)); // Add bot response to context
     } catch (error) {
       setMessages((prev) => [
         ...prev,
@@ -70,23 +72,12 @@ export const Chatbot = () => {
   };
 
   return (
-    <Card className="w-full mx-auto bg-zinc-900 text-white border-zinc-800">
+    <Card className="w-[50%] mx-auto bg-zinc-900 text-white border-zinc-800">
       <CardHeader>
-        <div className="flex items-center justify-between">
-          {/* Go Back Button */}
-          <Button
-            onClick={() => router.push('/')} // Navigate back to the root route
-            className="flex items-center space-x-2 text-white hover:text-blue-400"
-            variant="solid"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            <span>Go Back</span>
-          </Button>
-          <CardTitle className="text-xl font-bold flex items-center gap-2">
-            <Bot className="w-6 h-6" />
-            THE REALBOT
-          </CardTitle>
-        </div>
+        <CardTitle className="text-xl font-bold flex items-center gap-2">
+          <Bot className="w-6 h-6" />
+          THE REALBOT
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <ScrollArea className="h-[400px] pr-4" ref={scrollRef}>

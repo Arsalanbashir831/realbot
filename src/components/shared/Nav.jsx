@@ -10,6 +10,7 @@ export function Nav() {
   const links = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
+    { href: '/chat', label: 'Chat' },
   ];
 
   return (

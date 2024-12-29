@@ -9,7 +9,7 @@ export default function NavbarProvider({ children }) {
   return (
     <div>
       {/* Conditionally render Nav */}
-      {pathname !== '/chat' && <Nav />}
+      { <Nav />}
       {children}
     </div>
   );

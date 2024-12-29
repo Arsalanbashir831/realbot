@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       >
       <NavbarProvider>
         {children}
-        <footer className="border-t border-gray-200 py-6">
+        <footer className="border-t border-black py-6">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm text-gray-500">
             © {new Date().getFullYear()} REALBOT. All rights reserved.
