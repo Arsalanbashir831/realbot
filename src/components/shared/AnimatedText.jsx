@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 export function AnimatedText() {
   const [cursorPosition, setCursorPosition] = useState(-1); // Track the cursor position (-1 means no hover)
-  const text = "REALBOT";
+  const text = "$REALBOT";
 
   const handleMouseMove = (e) => {
     const textElement = e.currentTarget;
