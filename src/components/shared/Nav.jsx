@@ -14,7 +14,7 @@ export function Nav() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-black">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-transparent">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-8">
           <Link href="/" className="text-white text-2xl font-bold">
