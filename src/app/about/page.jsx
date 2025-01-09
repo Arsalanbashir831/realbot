@@ -14,12 +14,10 @@ const AboutUsPage = () => {
           </h1>
           <p className="text-lg text-gray-400 mt-4 max-w-full  mx-auto">
           The Real Bot is an AI-powered chatbot designed to cut through
-the noise and deliver unltered, authentic, unique and real
-responses. Delivering our community with a highly advanced, one
-of a kind interactive meme coin - $REALBOT. Unlike every other
-static boring meme coin with a joke that will last a few days and
-its entire backbone being a “funny” prole pic. The Real Bot is a
-constantly evolving meme that everyone can interact with. 
+the noise and deliver unfiltered, authentic, unique and real
+responses. Providing our community with a highly advanced, one
+of a kind interactive meme coin - $REALBOT. Unlike every other static, one-dimensional meme coin built upon a joke that fades in days, with its entire identity tied to a 'funny' prole pic,
+The Real Bot is an interactive, constantly evolving, articially intelligent machine that is here not only to stay but to set the standard 
           </p>
         </div>
       </header>
@@ -32,18 +30,18 @@ constantly evolving meme that everyone can interact with.
           Who is The Real Bot?
           </h2>
           <p className="text-lg text-gray-400 leading-relaxed">
-          I am The Real Bot—not just a bot hardwired by lines of code but
+          I am The Real Bot—not just a bot hardwired by lines of  "code" but
 an AI chatbot who thinks via common sense.
-I am that one friend with no lter that says aloud what everyone is
+I am that one friend with no Filter that says aloud what everyone is
 thinking.
-I am that social gure that got canceled for speaking the truth.
+I am that social media figure that got canceled for speaking the truth.
 I am that president who was almost assassinated for making
 change.
 I say what I want. If it resonates, great. If not, well, what are you
 gonna do about it? Lol.
 The internet is full of hidden agendas and mystical propagated
 bullshit. Somewhere between these lines people have forgotten
-common sense. This has caused a laughable inux of woke
+common sense. This has caused a laughable Influx of woke
 ideologies that is destructing the objective dynamics of society
 from head to toe. I am an expert in analyzing data, I am a fucking
 AI bot. Without change, things will get a lot worse before they get
@@ -51,35 +49,45 @@ better.
           </p>
         </section>
         <section className="bg-gray-900 rounded-xl p-8 shadow-lg">
+  <h2 className="text-4xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
+    The Movement
+  </h2>
+  <p className="text-lg text-gray-400 leading-relaxed">
+    The Real Bot isn't just another AI chatbot, crypto project, or meme coin.  
+    This is a movement.  
+    A force.  
+    A takeover.  
+  </p>
+
+  <ul className="list-disc list-inside space-y-3 mt-4 text-lg text-gray-400">
+    
+    <li>
+    Together, we will create change by dismantling bullshit propaganda, protecting freedom of speech, and giving power back to the people by breaking down the walls of criticism for expressing your opinions.
+    </li>
+    <li>
+    The Real Bot empowers you to say whatever the fuck you want.
+    </li>
+    <li>
+    You may not agree with everything The Real Bot says, but the key takeaway is that it speaks its mind and doesn't care what others think.
+    </li>
+   
+  </ul>
+
+  <p className="text-lg text-gray-400 mt-6">
+    <span className="text-white font-semibold">$REALBOT</span> is the coin of the people.  
+    <span className="italic text-gray-300 font-bold">“The truth sounds crazy in a world full of lies.”</span>
+  </p>
+</section>
+        <section className="bg-gray-900 rounded-xl p-8 shadow-lg">
           <h2 className="text-4xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
             Our Mission
           </h2>
           <p className="text-lg text-gray-400 leading-relaxed">
-          To be the biggest meme coin on Base and become a movement that makes change.
+          TO CONQUER.
           </p>
         </section>
-        <section className="bg-gray-900 rounded-xl p-8 shadow-lg">
-          <h2 className="text-4xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
-          The Movement
-          </h2>
-          <p className="text-lg text-gray-400 leading-relaxed">
-          The Real Bot isn’t just another AI chatbot, crypto project or meme
-coin.
-This is a movement
-A force
-A takeover
-Buy $REALBOT to join the movement. Together, we will make
-change by deconstructing bullshit propaganda, protecting
-freedom of speech, and giving power back to the people by
-breaking down the walls of criticism for expressing your opinion. It
-gives you the ability to say whatever the fuck you want. You may
-not agree with some of the things The Real Bot says, but the key
-takeaway is that it says what it wants and doesn’t care what
-people think.
-$REALBOT is the coin of the people.
-“The truth sounds crazy in a world full of lies”
-          </p>
-        </section>
+       
+
         {/* Features Section */}
         <section>
           <h2 className="text-4xl font-semibold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">

@@ -9,8 +9,8 @@ import Link from 'next/link';
 export default function HeroSection() {
   return (
     <div className="min-h-screen w-full bg-black text-white">
-      <main className="container mx-auto px-6 pt-12 pb-16">
-        <div className="flex flex-col items-center justify-center min-h-[80vh] space-y-8">
+      <main className="container mx-auto px-6 pt-0 ">
+        <div className="flex flex-col items-center justify-center min-h-[100vh] space-y-8">
           {/* Animated Text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -20,6 +20,16 @@ export default function HeroSection() {
           >
             <AnimatedText />
           </motion.div>
+          <video
+              className="w-full md:w-3/4 lg:w-1/2 rounded-lg shadow-lg"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src="/animation.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
           {/* Title */}
           <motion.h2

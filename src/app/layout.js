@@ -22,18 +22,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black `}
       >
       <NavbarProvider>
         {children}
-        <footer className="border-t border-black py-6">
+      
+      </NavbarProvider>
+      {/* <footer className="border-t border-black py-6">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-500 ">
             © {new Date().getFullYear()} REALBOT. All rights reserved.
           </p>
         </div>
-      </footer>
-      </NavbarProvider>
+      </footer> */}
       </body>
     </html>
   );
